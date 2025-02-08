@@ -13,6 +13,9 @@ const router = createRouter({
     { path: '/diskografi', name: 'Discography Page', component: DiscographyView },
     { path: '/konserler', name: 'Concerts Page', component: ConcertsView },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0, behavior: 'smooth' }
+  },
 })
 
 router.beforeEach(() => {
