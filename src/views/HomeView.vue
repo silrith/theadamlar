@@ -1,24 +1,10 @@
-<script setup></script>
-
 <template>
   <section>
     <div class="container">
-      <img
-        class="animated-img img1"
-        src="../assets/adamlar/berkantilavel.svg"
-        alt="Berkan Tilavel"
-      />
-      <img class="animated-img img3" src="../assets/adamlar/tolgaakdogan.svg" alt="Tolga Akdoğan" />
-      <img
-        class="animated-img img2"
-        src="../assets/adamlar/beratiscioglu.svg"
-        alt="Berat İşçioğlu"
-      />
-      <img
-        class="animated-img img4"
-        src="../assets/adamlar/gurhanogutucu.svg"
-        alt="Gürhan Öğütücü"
-      />
+      <img class="animated-img" src="../assets/adamlar/berkantilavel.svg" alt="Berkan Tilavel" />
+      <img class="animated-img" src="../assets/adamlar/tolgaakdogan.svg" alt="Tolga Akdoğan" />
+      <img class="animated-img" src="../assets/adamlar/beratiscioglu.svg" alt="Berat İşçioğlu" />
+      <img class="animated-img" src="../assets/adamlar/gurhanogutucu.svg" alt="Gürhan Öğütücü" />
     </div>
     <iframe
       src="https://www.youtube.com/embed/QmOAfzLAH58?autoplay=1&mute=1&rel=0&showinfo=0"
@@ -45,47 +31,47 @@
         <font-awesome-icon :icon="['fab', 'square-facebook']" />
       </a>
     </div>
+    <!-- <div class="play" @click="toggleAlbum">
+      <font-awesome-icon :icon="['fas', isPlaying ? 'stop' : 'play']" />
+      <audio ref="audioPlayer" :src="audioUrl" hidden></audio>
+    </div> -->
   </section>
 </template>
+
+<script setup>
+// import { ref } from 'vue'
+
+// const isPlaying = ref(false)
+// const audioPlayer = ref(null)
+// const audioUrl = ref('/mp3/kahirli-merdiven.mp3')
+
+// const toggleAlbum = () => {
+//   if (isPlaying.value) {
+//     audioPlayer.value.pause()
+//     audioPlayer.value.currentTime = 0
+//   } else {
+//     audioPlayer.value.play()
+//   }
+
+//   isPlaying.value = !isPlaying.value
+// }
+</script>
 
 <style scoped>
 .container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
 }
 
 .animated-img {
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   position: relative;
-  animation: slideIn 1s ease-in forwards;
-}
-
-.img1 {
-  animation-delay: 3.35s;
-  transform: translateX(-200%);
-  --deg: -200%;
-}
-
-.img2 {
-  animation-delay: 3.7s;
-  transform: translateX(200%);
-  --deg: 200%;
-}
-
-.img3 {
-  animation-delay: 4.05s;
-  transform: translateX(-200%);
-  --deg: -200%;
-}
-
-.img4 {
-  animation-delay: 4.4s;
-  transform: translateX(200%);
-  --deg: 200%;
+  animation: slideIn 4s ease-in forwards linear;
+  height: clamp(200px, 95vw, 100%);
 }
 
 @keyframes slideIn {
@@ -94,7 +80,6 @@
   }
   50% {
     opacity: 1;
-    transform: translateX(var(--deg));
   }
   100% {
     opacity: 1;
@@ -104,10 +89,9 @@
 iframe {
   border: 2px solid #d8d1b4;
   border-radius: 2rem;
-  width: 320px;
-  height: 182px;
+  width: clamp(300px, 25vw, 640px);
+  height: clamp(170px, 14.25vw, 270px);
   box-shadow: 0px 0px 1px #d8d1b4;
-  position: absolute;
 }
 
 .social-media {
@@ -120,16 +104,31 @@ iframe {
   bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-  iframe {
-    display: none;
-  }
+.play {
+  position: absolute;
+  bottom: 0.5rem;
+  background-color: #b6444f;
+  padding: clamp(0.25rem, 2.5vw, 0.5rem);
+  border-radius: 50%;
+  width: clamp(0.5rem, 2.5vw, 2rem);
+  height: clamp(0.5rem, 2.5vw, 2rem);
+  box-shadow: 0 0 2px 2px #d8d1b4;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+@media (max-width: 768px) {
   .social-media {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     right: 1rem;
+  }
+
+  .animated-img {
+    height: 180px;
   }
 }
 </style>

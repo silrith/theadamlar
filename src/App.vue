@@ -39,7 +39,6 @@ p {
   bottom: 10%;
   rotate: -10deg;
   font-size: clamp(1rem, 5vw, 5rem);
-  /* font-size: 5rem; */
   opacity: 0.25;
 }
 </style>

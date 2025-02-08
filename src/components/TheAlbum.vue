@@ -121,8 +121,8 @@ const openAlbumSongs = () => {
 }
 
 .album-front {
-  width: 352px;
-  height: 352px;
+  width: 356px;
+  height: 356px;
   position: absolute;
   background-size: cover;
   background-position: center;
@@ -161,8 +161,8 @@ const openAlbumSongs = () => {
 }
 
 .album-back {
-  width: 352px;
-  height: 352px;
+  width: 356px;
+  height: 356px;
   background-color: rgb(255, 255, 255, 0.25);
   position: absolute;
   opacity: 1;
