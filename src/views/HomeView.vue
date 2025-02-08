@@ -107,8 +107,6 @@ iframe {
   height: 182px;
   box-shadow: 0px 0px 1px #d8d1b4;
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
 }
 
 .social-media {
