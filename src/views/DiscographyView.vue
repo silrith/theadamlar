@@ -1,10 +1,10 @@
 <script setup>
 import Album from '../components/TheAlbum.vue'
-import kahirlimerdiven from '../assets/albums/kahirlimerdiven.svg'
-import hareketekimsemaniolamaz from '../assets/albums/hareketekimsemaniolamaz.svg'
-import dunyagunlukleri from '../assets/albums/dunyagunlukleri.svg'
-import ruyalardaburusmusuz from '../assets/albums/ruyalardaburusmusuz.svg'
-import eskidostumtanklagelmis from '../assets/albums/eskidostumtanklagelmis.svg'
+import kahirlimerdiven from '/albums/kahirlimerdiven.svg'
+import hareketekimsemaniolamaz from '/albums/hareketekimsemaniolamaz.svg'
+import dunyagunlukleri from '/albums/dunyagunlukleri.svg'
+import ruyalardaburusmusuz from '/albums/ruyalardaburusmusuz.svg'
+import eskidostumtanklagelmis from '/albums/eskidostumtanklagelmis.svg'
 </script>
 
 <template>

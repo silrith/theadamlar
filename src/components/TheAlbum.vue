@@ -39,27 +39,16 @@ const openAlbum = async () => {
 
   console.log(match)
 
-  switch (match[1]) {
-    case 'eskidostumtanklagelmis': {
-      audioUrl.value = '/mp3/kapisi-kapali.mp3'
-      break
-    }
-    case 'dunyagunlukleri': {
-      audioUrl.value = '/mp3/zombi.mp3'
-      break
-    }
-    case 'hareketekimsemaniolamaz': {
-      audioUrl.value = '/mp3/dal.mp3'
-      break
-    }
-    case 'ruyalardaburusmusuz': {
-      audioUrl.value = '/mp3/ruyalarda-burusmusuz.mp3'
-      break
-    }
-    default: {
-      audioUrl.value = '/mp3/kahirli-merdiven.mp3'
-      break
-    }
+  if (match[1].includes('eskidostumtanklagelmis')) {
+    audioUrl.value = '/mp3/kapisi-kapali.mp3'
+  } else if (match[1].includes('dunyagunlukleri')) {
+    audioUrl.value = '/mp3/zombi.mp3'
+  } else if (match[1].includes('hareketekimsemaniolamaz')) {
+    audioUrl.value = '/mp3/dal.mp3'
+  } else if (match[1].includes('ruyalardaburusmusuz')) {
+    audioUrl.value = '/mp3/ruyalarda-burusmusuz.mp3'
+  } else {
+    audioUrl.value = '/mp3/kahirli-merdiven.mp3'
   }
 
   await nextTick()
