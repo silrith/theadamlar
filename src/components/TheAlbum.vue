@@ -13,7 +13,7 @@
           <div class="blank-white"></div>
         </div>
       </div>
-      <audio ref="audioPlayer" :src="audioUrl" hidden></audio>
+      <audio ref="audioPlayer" :src="audioUrl" :key="audioUrl" hidden></audio>
       <font-awesome-icon :icon="['fas', 'stop']" @click="closeAlbum" />
     </div>
   </div>
@@ -63,8 +63,8 @@ const openAlbum = async () => {
   }
 
   await nextTick()
-
   if (audioPlayer.value) {
+    audioPlayer.value.load()
     setTimeout(() => {
       audioPlayer.value.play().catch((error) => console.error('Ses çalma hatası:', error))
     }, 100)
