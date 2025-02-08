@@ -1,22 +1,26 @@
 <template>
   <div class="album-cover" :class="{ active: isActive }">
-    <div
-      class="album-front"
-      :style="{ backgroundImage: `url(${backgroundImage})` }"
-      @click="openAlbum"
-    ></div>
-    <div class="album-back" @click="openAlbumSongs">
-      <div class="cd" :style="{ backgroundImage: `url(${backgroundImage})` }">
+    <div class="album-front" :style="{ backgroundImage: `url(${backgroundImage})` }">
+      <font-awesome-icon :icon="['fas', 'play']" @click="openAlbum" />
+    </div>
+    <div class="album-back">
+      <div
+        class="cd"
+        :style="{ backgroundImage: `url(${backgroundImage})` }"
+        @click="openAlbumSongs"
+      >
         <div class="blank">
           <div class="blank-white"></div>
         </div>
       </div>
+      <audio ref="audioPlayer" :src="audioUrl" hidden></audio>
+      <font-awesome-icon :icon="['fas', 'stop']" @click="closeAlbum" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue'
+import { ref, defineProps, nextTick } from 'vue'
 
 const props = defineProps({
   backgroundImage: String,
@@ -24,9 +28,47 @@ const props = defineProps({
 
 const isActive = ref(false)
 const albumUrl = ref('')
+const audioPlayer = ref(null)
+const audioUrl = ref('')
 
-const openAlbum = () => {
+const openAlbum = async () => {
   isActive.value = !isActive.value
+
+  const album = props.backgroundImage
+  const match = album.match(/\/([^/]+)\./)
+
+  switch (match[1]) {
+    case 'eskidostumtanklagelmis':
+      audioUrl.value = '/mp3/kapisi-kapali.mp3'
+      break
+    case 'dunyagunlukleri':
+      audioUrl.value = '/mp3/zombi.mp3'
+      break
+    case 'hareketekimsemaniolamaz':
+      audioUrl.value = '/mp3/dal.mp3'
+      break
+    case 'ruyalardaburusmusuz':
+      audioUrl.value = '/mp3/ruyalarda-burusmusuz.mp3'
+      break
+    default:
+      audioUrl.value = '/mp3/kahirli-merdiven.mp3'
+      break
+  }
+
+  await nextTick()
+
+  if (audioPlayer.value) {
+    setTimeout(() => {
+      audioPlayer.value.play().catch((error) => console.error('Ses çalma hatası:', error))
+    }, 100)
+  }
+}
+
+const closeAlbum = () => {
+  isActive.value = !isActive.value
+
+  audioPlayer.value.pause()
+  audioPlayer.value.currentTime = 0
 }
 
 const openAlbumSongs = () => {
@@ -90,9 +132,26 @@ const openAlbumSongs = () => {
   transform-origin: left;
 }
 
+.album-front svg,
+.album-back svg {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background-color: #b6444f;
+  padding: clamp(0.25rem, 2.5vw, 0.5rem);
+  border-radius: 50%;
+  width: clamp(0.5rem, 2.5vw, 1rem);
+  height: clamp(0.5rem, 2.5vw, 1rem);
+  box-shadow: 0 0 2px 2px #d8d1b4;
+}
+
 .album-cover.active .album-front {
   animation: openAlbum 1s linear forwards;
   border: 4px solid #d8d1b4;
+
+  & svg {
+    display: none;
+  }
 }
 
 .album-back {
@@ -159,6 +218,62 @@ const openAlbumSongs = () => {
   100% {
     transform: rotateY(-180deg) translateX(0.5%);
     box-shadow: -4px 0px 6px 4px rgb(0, 0, 0, 0.75);
+  }
+}
+
+@media (max-width: 768px) {
+  .album-cover {
+    width: 300px;
+    height: 290px;
+    border: 4px solid #d8d1b4;
+  }
+
+  .album-front {
+    width: 292px;
+    height: 280px;
+  }
+
+  .album-back {
+    width: 292px;
+    height: 282px;
+  }
+
+  .cd {
+    width: 244px;
+    height: 244px;
+  }
+
+  .album-cover.active {
+    width: 300px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 480px) {
+  .album-cover {
+    width: 240px;
+    height: 240px;
+    border: 4px solid #d8d1b4;
+  }
+
+  .album-front {
+    width: 230px;
+    height: 230px;
+  }
+
+  .album-back {
+    width: 232px;
+    height: 232px;
+  }
+
+  .cd {
+    width: 200px;
+    height: 200px;
+  }
+
+  .album-cover.active {
+    width: 240px;
+    height: 240px;
   }
 }
 </style>

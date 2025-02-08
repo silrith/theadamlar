@@ -39,7 +39,7 @@
         <font-awesome-icon :icon="['fab', 'instagram']" />
       </a>
       <a href="https://x.com/theadamlar" target="_blank">
-        <font-awesome-icon :icon="['fab', 'x-twitter']" />
+        <font-awesome-icon :icon="['fab', 'square-x-twitter']" />
       </a>
       <a href="https://www.facebook.com/theadamlar/?locale=tr_TR" target="_blank">
         <font-awesome-icon :icon="['fab', 'square-facebook']" />
@@ -111,7 +111,7 @@ iframe {
 }
 
 .social-media {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;

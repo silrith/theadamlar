@@ -16,7 +16,7 @@
 section {
   position: relative;
   width: 100%;
-  min-height: 90dvh;
+  min-height: 88dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -47,7 +47,7 @@
       <div>
         <p style="text-decoration: underline; text-underline-offset: 8px">EP</p>
         <ul>
-          <li>2024 - Canlı 01: FadeOut Studios - 6 şarkı</li>
+          <li>2024 - Canlı 01: FadeOut Studios</li>
         </ul>
       </div>
     </div>
@@ -57,7 +57,7 @@
 <style scoped>
 .biography,
 .discography {
-  padding: 1rem 0rem;
+  padding: 1rem;
   text-align: justify;
   width: clamp(300px, 95vw, 1600px);
   display: flex;
@@ -71,5 +71,15 @@
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .discography {
+    flex-direction: column;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
 }
 </style>

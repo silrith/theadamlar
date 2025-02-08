@@ -25,5 +25,6 @@ import eskidostumtanklagelmis from '../assets/albums/eskidostumtanklagelmis.svg'
   justify-content: center;
   align-items: start;
   padding: 1rem;
+  position: relative;
 }
 </style>

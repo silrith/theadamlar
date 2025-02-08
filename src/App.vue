@@ -30,15 +30,16 @@ router.afterEach(() => {
 .app-image {
   opacity: 0.25;
   position: absolute;
-  width: 25%;
-  height: 50%;
+  width: clamp(300px, 25vw, 480px);
+  height: clamp(300px, 25vw, 480px);
   top: 25%;
 }
 p {
   position: absolute;
-  bottom: 5rem;
+  bottom: 10%;
   rotate: -10deg;
-  font-size: 5rem;
+  font-size: clamp(1rem, 5vw, 5rem);
+  /* font-size: 5rem; */
   opacity: 0.25;
 }
 </style>

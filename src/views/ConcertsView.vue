@@ -16,4 +16,8 @@
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+ul li {
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+}
+</style>
