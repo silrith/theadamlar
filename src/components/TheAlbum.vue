@@ -106,7 +106,7 @@ const openAlbumSongs = () => {
 .album-cover {
   width: 360px;
   height: 360px;
-  border: 4px solid #d8d1b4;
+  border: 2px solid #d8d1b4;
   border-radius: 0.25rem;
   cursor: pointer;
   position: relative;
@@ -143,6 +143,12 @@ const openAlbumSongs = () => {
   width: clamp(0.5rem, 2.5vw, 1rem);
   height: clamp(0.5rem, 2.5vw, 1rem);
   box-shadow: 0 0 2px 2px #d8d1b4;
+  outline: none;
+}
+
+.album-back svg {
+  bottom: calc(0.5rem + 2px);
+  right: calc(0.5rem + 2px);
 }
 
 .album-cover.active .album-front {
@@ -165,7 +171,7 @@ const openAlbumSongs = () => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: inset 0px 0px 4px 4px #d8d1b4;
+  box-shadow: inset 0px 0px 2px 2px #d8d1b4;
 }
 
 .cd {

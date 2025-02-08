@@ -10,7 +10,7 @@
       <router-link to="/konserler" @click="closeMenu">Konser Takvimi</router-link>
     </nav>
     <button class="hamburger" @click="toggleMenu">
-      <font-awesome-icon :icon="['fas', 'microphone-lines']" />
+      <font-awesome-icon :icon="['fas', 'bars']" />
     </button>
   </header>
 </template>

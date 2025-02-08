@@ -119,4 +119,17 @@ iframe {
   left: 1rem;
   bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  iframe {
+    display: none;
+  }
+
+  .social-media {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    right: 1rem;
+  }
+}
 </style>

@@ -78,7 +78,8 @@
     flex-direction: column;
   }
 
-  p {
+  p,
+  li {
     font-size: 0.75rem;
   }
 }
