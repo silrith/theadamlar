@@ -1,0 +1,22 @@
+@font-face {
+  font-family: Stronger;
+  src:
+    url('@/assets/fonts/Stronger.ttf') format('truetype'),
+    url('@/assets/fonts/Stronger.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Heaters;
+  src: url('@/assets/fonts/Heaters.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Brave;
+  src: url('@/assets/fonts/Brave.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
