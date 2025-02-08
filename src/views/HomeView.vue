@@ -28,19 +28,20 @@
     <div class="social-media">
       <a
         href="https://open.spotify.com/intl-tr/artist/1g4J8P1JWwanNyyXckRX5W?si=H6GLkHC-Q2uZ8o40fFyhJQ"
+        target="_blank"
       >
         <font-awesome-icon :icon="['fab', 'spotify']" />
       </a>
-      <a href="https://www.youtube.com/channel/UCH_gImB5q15ScuE8-52k3Iw">
+      <a href="https://www.youtube.com/channel/UCH_gImB5q15ScuE8-52k3Iw" target="_blank">
         <font-awesome-icon :icon="['fab', 'youtube']" />
       </a>
-      <a href="https://www.instagram.com/theadamlar/">
+      <a href="https://www.instagram.com/theadamlar/" target="_blank">
         <font-awesome-icon :icon="['fab', 'instagram']" />
       </a>
-      <a href="https://x.com/theadamlar">
+      <a href="https://x.com/theadamlar" target="_blank">
         <font-awesome-icon :icon="['fab', 'x-twitter']" />
       </a>
-      <a href="https://www.facebook.com/theadamlar/?locale=tr_TR">
+      <a href="https://www.facebook.com/theadamlar/?locale=tr_TR" target="_blank">
         <font-awesome-icon :icon="['fab', 'square-facebook']" />
       </a>
     </div>
@@ -64,25 +65,25 @@
 }
 
 .img1 {
-  animation-delay: 2s;
+  animation-delay: 3.35s;
   transform: translateX(-200%);
   --deg: -200%;
 }
 
 .img2 {
-  animation-delay: 4s;
+  animation-delay: 3.7s;
   transform: translateX(200%);
   --deg: 200%;
 }
 
 .img3 {
-  animation-delay: 6s;
+  animation-delay: 4.05s;
   transform: translateX(-200%);
   --deg: -200%;
 }
 
 .img4 {
-  animation-delay: 8s;
+  animation-delay: 4.4s;
   transform: translateX(200%);
   --deg: 200%;
 }
@@ -115,7 +116,7 @@ iframe {
   flex-direction: column;
   gap: 1rem;
   position: absolute;
-  left: 2rem;
-  bottom: 2rem;
+  left: 1rem;
+  bottom: 1rem;
 }
 </style>
