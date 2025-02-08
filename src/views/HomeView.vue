@@ -1,10 +1,30 @@
 <template>
   <section>
     <div class="container">
-      <img class="animated-img" src="../assets/adamlar/berkantilavel.svg" alt="Berkan Tilavel" />
-      <img class="animated-img" src="../assets/adamlar/tolgaakdogan.svg" alt="Tolga Akdoğan" />
-      <img class="animated-img" src="../assets/adamlar/beratiscioglu.svg" alt="Berat İşçioğlu" />
-      <img class="animated-img" src="../assets/adamlar/gurhanogutucu.svg" alt="Gürhan Öğütücü" />
+      <img
+        class="animated-img"
+        src="../assets/adamlar/berkantilavel.svg"
+        alt="Berkan Tilavel"
+        style="--t: 5s; --p: -200%"
+      />
+      <img
+        class="animated-img"
+        src="../assets/adamlar/tolgaakdogan.svg"
+        alt="Tolga Akdoğan"
+        style="--t: 2s; --p: -200%"
+      />
+      <img
+        class="animated-img"
+        src="../assets/adamlar/beratiscioglu.svg"
+        alt="Berat İşçioğlu"
+        style="--t: 3s; --p: 200%"
+      />
+      <img
+        class="animated-img"
+        src="../assets/adamlar/gurhanogutucu.svg"
+        alt="Gürhan Öğütücü"
+        style="--t: 4s; --p: 200%"
+      />
     </div>
     <iframe
       src="https://www.youtube.com/embed/QmOAfzLAH58?autoplay=1&mute=1&rel=0&showinfo=0"
@@ -64,25 +84,27 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  overflow: hidden;
 }
 
 .animated-img {
   width: 100%;
-  opacity: 1;
+  opacity: 0;
   position: relative;
-  animation: slideIn 4s ease-in forwards linear;
+  animation: slideIn 4s ease-in forwards;
   height: clamp(200px, 95vw, 100%);
+  animation-delay: var(--t);
+  transform: translateX(var(--p));
 }
 
 @keyframes slideIn {
   0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
+    opacity: 0;
+    transform: translateX(var(--p));
   }
   100% {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
