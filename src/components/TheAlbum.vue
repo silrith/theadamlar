@@ -37,22 +37,29 @@ const openAlbum = async () => {
   const album = props.backgroundImage
   const match = album.match(/\/([^/]+)\./)
 
+  console.log(match)
+
   switch (match[1]) {
-    case 'eskidostumtanklagelmis':
+    case 'eskidostumtanklagelmis': {
       audioUrl.value = '/mp3/kapisi-kapali.mp3'
       break
-    case 'dunyagunlukleri':
+    }
+    case 'dunyagunlukleri': {
       audioUrl.value = '/mp3/zombi.mp3'
       break
-    case 'hareketekimsemaniolamaz':
+    }
+    case 'hareketekimsemaniolamaz': {
       audioUrl.value = '/mp3/dal.mp3'
       break
-    case 'ruyalardaburusmusuz':
+    }
+    case 'ruyalardaburusmusuz': {
       audioUrl.value = '/mp3/ruyalarda-burusmusuz.mp3'
       break
-    default:
+    }
+    default: {
       audioUrl.value = '/mp3/kahirli-merdiven.mp3'
       break
+    }
   }
 
   await nextTick()
