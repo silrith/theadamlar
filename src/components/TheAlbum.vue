@@ -102,7 +102,7 @@ const openAlbumSongs = () => {
 .album-cover {
   width: 360px;
   height: 360px;
-  border: 2px solid #d8d1b4;
+  border: 2px solid #afa991;
   border-radius: 0.25rem;
   cursor: pointer;
   position: relative;
@@ -138,7 +138,7 @@ const openAlbumSongs = () => {
   border-radius: 50%;
   width: clamp(0.5rem, 2.5vw, 1rem);
   height: clamp(0.5rem, 2.5vw, 1rem);
-  box-shadow: 0 0 2px 2px #d8d1b4;
+  box-shadow: 0 0 2px 2px #afa991;
   outline: none;
 }
 
@@ -149,7 +149,7 @@ const openAlbumSongs = () => {
 
 .album-cover.active .album-front {
   animation: openAlbum 1s linear forwards;
-  border: 4px solid #d8d1b4;
+  border: 4px solid #afa991;
 
   & svg {
     display: none;
@@ -167,7 +167,7 @@ const openAlbumSongs = () => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: inset 0px 0px 2px 2px #d8d1b4;
+  box-shadow: inset 0px 0px 2px 2px #afa991;
 }
 
 .cd {
@@ -227,7 +227,7 @@ const openAlbumSongs = () => {
   .album-cover {
     width: 300px;
     height: 290px;
-    border: 4px solid #d8d1b4;
+    border: 4px solid #afa991;
   }
 
   .album-front {
@@ -255,7 +255,7 @@ const openAlbumSongs = () => {
   .album-cover {
     width: 240px;
     height: 240px;
-    border: 4px solid #d8d1b4;
+    border: 4px solid #afa991;
   }
 
   .album-front {

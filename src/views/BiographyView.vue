@@ -1,6 +1,5 @@
 <template>
   <section>
-    <h1 style="text-decoration: underline; text-underline-offset: 8px">The Adamlar</h1>
     <div class="biography">
       <p style="text-decoration: underline; text-underline-offset: 8px">Biyografi</p>
       <p>

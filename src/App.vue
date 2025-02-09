@@ -20,7 +20,7 @@ router.afterEach(() => {
 
 <template>
   <img src="./assets/adamlar/snake.png" alt="Kahırlı Merdiven" class="app-image" />
-  <p>KAHıRLı MERDİVEN</p>
+  <p>KAHıRLı MERdivEN</p>
   <Header />
   <Loading v-if="isLoading" />
   <RouterView />

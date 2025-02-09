@@ -5,9 +5,10 @@
     </router-link>
     <nav :class="{ open: isMenuOpen }">
       <router-link to="/" @click="closeMenu">Ana Sayfa</router-link>
-      <router-link to="/biografi" @click="closeMenu">Biografi</router-link>
-      <router-link to="/diskografi" @click="closeMenu">Diskografi</router-link>
-      <router-link to="/konserler" @click="closeMenu">Konser Takvimi</router-link>
+      <router-link to="/biografi" @click="closeMenu">Bİyografİ</router-link>
+      <router-link to="/diskografi" @click="closeMenu">Dİskografİ</router-link>
+      <router-link to="/galery" @click="closeMenu">Galerİ</router-link>
+      <router-link to="/konserler" @click="closeMenu">Konser Takvİmİ</router-link>
     </nav>
     <button class="hamburger" @click="toggleMenu">
       <font-awesome-icon :icon="['fas', 'bars']" />
@@ -44,7 +45,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  border-bottom: 2px solid #d8d1b4;
+  border-bottom: 2px solid #afa991;
   top: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -59,11 +60,16 @@ nav a {
   font-size: clamp(0.75rem, 5vw, 1rem);
   font-weight: bold;
   transition: color 0.5s ease-in-out;
-  color: #d8d1b4;
+  color: #afa991;
 }
 
 nav a:hover {
   color: #b6444f;
+}
+
+nav a.router-link-exact-active {
+  color: #b6444f;
+  font-weight: bold;
 }
 
 .hamburger {
@@ -72,7 +78,7 @@ nav a:hover {
   background: none;
   border: none;
   cursor: pointer;
-  color: #d8d1b4;
+  color: #afa991;
 }
 
 @media (max-width: 768px) {
