@@ -22,9 +22,9 @@
 import { ref } from 'vue'
 
 const images = ref([
+  'https://media.bantmag.com/wp-content/uploads/2019/06/adamlar4.webp',
   'https://media.bantmag.com/wp-content/uploads/2019/06/adamlar2-800x533.avif',
   'https://api.pozitifmuzik.com/images/event/4e4934087d7f47879fe430c97de798a5/base.png',
-  'https://media.bantmag.com/wp-content/uploads/2019/06/adamlar4.webp',
   'https://www.dergy.com/_next/image/?url=https%3A%2F%2Fwp.dergy.com%2Fwp-content%2Fuploads%2F2023%2F02%2FAdamlar-Harekete-Kimse-Mani-Olamaz.-Part-II-EP-sanatci-gorseli-2-scaled-1.jpg&w=1920&q=75',
   'https://cdn.bubilet.com.tr/files/Etkinlik/adamlar-konseri-45103.jpg',
   'https://lakonser.com/wp-content/uploads/2024/02/adamlar-27.02.2024-02-24-11.jpg',
@@ -33,10 +33,10 @@ const images = ref([
   'https://static.darkbluenotes.com/uploads/2023/07/adamlar_tolga-800x445.jpg',
   'https://cdn1.kralmuzik.com.tr/media/img/920x570/24-11/18/adamlar-kahirli-merdiven-album-1.jpg',
   'https://img.redbull.com/images/c_fill,g_auto,w_1200,h_800/q_auto,f_auto/redbullcom/2016/11/19/1331830227014_2/adamlar',
-  'https://www.pausedergi.com/wp-content/uploads/2024/11/foto-1-20.jpg',
   'https://image.milimaj.com/i/milliyet/75/869x477/5c8c5d9207291c1d74fc7729.jpg',
   'https://lh3.googleusercontent.com/w4kf-St5IrEQlqbdBoTkLRREZ9lUVc5OitJe_5b8BnAGgDJK7sWHyZ7LCQPuNKhhWoNpHHvNmfdv4i4=w2880-h1200-p-l90-rj',
   'https://sozleri.co/wp-content/uploads/2024/11/adamlar-es-sarki-sozleri.jpg',
+  'https://www.pausedergi.com/wp-content/uploads/2024/11/foto-1-20.jpg',
 ])
 
 const modalImage = ref(null)

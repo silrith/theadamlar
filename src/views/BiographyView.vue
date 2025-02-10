@@ -1,9 +1,17 @@
 <template>
   <section>
     <div class="biography">
-      <p style="text-decoration: underline; text-underline-offset: 8px">Biyografi</p>
+      <p style="text-decoration: underline; text-underline-offset: 8px; color: #b6444f">
+        Biyografi
+      </p>
       <p>
-        <b style="font-size: 1.25rem; text-decoration: underline; text-underline-offset: 8px"
+        <b
+          style="
+            font-size: 1.25rem;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            color: #b6444f;
+          "
           >Adamlar</b
         >
         vokalist ve gitarist Tolga Akdoğan, gitarist Gürhan Öğütücü, bas gitarist Berat İşçioğlu ve
@@ -23,10 +31,12 @@
         yayınlandı.
       </p>
     </div>
-    <p style="text-decoration: underline; text-underline-offset: 8px">Diskografi</p>
+    <p style="text-decoration: underline; text-underline-offset: 8px; color: #b6444f">Diskografi</p>
     <div class="discography">
       <div>
-        <p style="text-decoration: underline; text-underline-offset: 8px">albümler</p>
+        <p style="text-decoration: underline; text-underline-offset: 8px; color: #b6444f">
+          albümler
+        </p>
         <ul>
           <li>2014 - Eski Dostum Tankla Gelmiş</li>
           <li>2016 - Rüyalarda Buruşmuşuz</li>
@@ -36,7 +46,7 @@
         </ul>
       </div>
       <div>
-        <p style="text-decoration: underline; text-underline-offset: 8px">Single</p>
+        <p style="text-decoration: underline; text-underline-offset: 8px; color: #b6444f">Single</p>
         <ul>
           <li>2018 - Hikaye</li>
           <li>2021 - Küçüğüm</li>
@@ -44,7 +54,7 @@
         </ul>
       </div>
       <div>
-        <p style="text-decoration: underline; text-underline-offset: 8px">EP</p>
+        <p style="text-decoration: underline; text-underline-offset: 8px; color: #b6444f">EP</p>
         <ul>
           <li>2024 - Canlı 01: FadeOut Studios</li>
         </ul>
