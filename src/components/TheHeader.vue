@@ -44,7 +44,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
+  z-index: 1000;
   border-bottom: 2px solid #afa991;
   top: 0;
   transition: all 0.3s ease-in-out;

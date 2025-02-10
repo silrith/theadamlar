@@ -95,6 +95,7 @@
   height: clamp(200px, 95vw, 100%);
   animation-delay: var(--t);
   transform: translateX(var(--p));
+  filter: drop-shadow(-1px 1px 2px #b6444f);
 }
 
 @keyframes slideIn {
