@@ -1,6 +1,12 @@
 <template>
   <section>
     <div class="container">
+      <!-- tarayıcı desteklemesine göre resim formatı -->
+      <!-- <picture>
+        <source srcset="image.avif" type="image/avif" />
+        <source srcset="image.webp" type="image/webp" />
+        <img src="image.jpg" alt="Görsel" />
+      </picture> -->
       <img
         class="animated-img"
         src="../assets/adamlar/berkantilavel.svg"
